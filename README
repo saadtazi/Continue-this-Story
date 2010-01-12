@@ -1,0 +1,20 @@
+Intro
+=====
+This project is an idea of Hal Gatewood (http://www.halgatewood.com).
+The idea is to build a website to let people write stories together.
+Everybody who has a facebook account can start a story, write the first piece, and ask one of his/her facebook 
+
+Technologies/Requirements
+==========================
+- symfony 1.4.1 framework (so php 5.2.4):
+- an ODBC that is supported by PDO/Doctrine (tested with mySQL)
+- webserver - tested with apache
+- a webdeveloper account
+
+Installation
+============
+- git it!
+- drop the symfony file inside /lib/vendor/symfony or set the proper symfony path in projectConfiguration.php
+- configure config/database.yml (or run the symfony configure:database command)
+- build everything: php symfony doctrine:build --all --and-load
+
