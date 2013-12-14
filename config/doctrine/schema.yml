@@ -1,0 +1,63 @@
+Story:
+  actAs:
+    Timestampable: ~
+    Taggable: ~
+    Sluggable:
+      fields: [title]
+  columns:
+    title:          { type: string(255), notnull: true }
+    creator_id:     { type: integer(4), notnull: true }
+    creator_name:   { type: string(50), notnull: true }
+    culture:        { type: string(7), default: 'en' }
+    is_public:      { type: boolean, default: true }
+    is_active:      { type: boolean, default: true }
+    is_finished:    { type: boolean, default: true }
+    piece_length:   { type: integer(4), default: 140 }
+  relations:
+    Creator: { onDelete: CASCADE, local: creator_id, foreign: id, class: sfGuardUser, foreignAlias: StoriesAsCreator }
+
+StoryPiece:
+  actAs:
+    Timestampable: ~
+#    Sortable: will use the create date (timestamp) instead
+  columns:
+    story_id:       { type: integer(20), notnull: true }
+    is_active:      { type: boolean, default: true }
+    writer_id:      { type: integer(4), notnull: true }
+    writer_name:    { type: string(50), notnull: true }
+    text:           { type: text, notnull: true }
+    next_writer_id: { type: string(20) }
+  relations:
+    Story: { onDelete: CASCADE, local: story_id, foreign: id, class: Story, foreignAlias: Pieces }
+    Writer: { onDelete: CASCADE, local: writer_id, foreign: id, class: sfGuardUser, foreignAlias: StoryPiecesAsWriter }
+#the friend is not neccessary registered in our DB
+#    NextWriter: { onDelete: CASCADE, local: next_writer_id, foreign: id, class: sfGuardUser, foreignAlias: NextStoryPieces }
+
+sfGuardUserProfile:
+  tableName:     sf_guard_user_profile
+  columns:
+    user_id:          { type: integer(4), notnull: true }
+    first_name:       { type: string(30) }
+    last_name:        { type: string(30) }
+    facebook_uid:     { type: string(20) }
+    email:            { type: string(255) }
+    email_hash:       { type: string(255) }
+  indexes:
+    facebook_uid_index:
+      fields: [facebook_uid]
+      unique: true
+    email_index:
+      fields: [email]
+      unique: true
+    email_hash_index:
+      fields: [email_hash]
+      unique: true
+  relations:
+    sfGuardUser:
+      type: one
+      foreignType: one
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      onDelete: cascade
+      foreignAlias: Profile

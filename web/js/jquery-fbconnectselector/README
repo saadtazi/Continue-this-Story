@@ -1,0 +1,35 @@
+
+Usage:
+1- include jquery autocomplete plugin (this one: http://bassistance.de/jquery-plugins/jquery-plugin-autocomplete/)
+2- include that file
+3- add the following javascript code:
+
+<script type="text/javascript">
+
+    $().ready(function() {
+
+	FB.ensureInit( function() {
+		//input with id = selectorField needs to be input type = text
+		$("#selectorField").friendselector({hiddenfieldname: "' . $name . '"});
+	 });
+    });
+
+</script>
+
+4- include the field:
+<input type="text" id="selectorField" style="display:none;" class="fbs_single" />
+
+
+It adds ul/li and hidden fields with attribute name=fbfriendsfields (the id of the selector field) but you can customize the "dropdown" option by redefining jQuery.fn.friendselector.formatOption
+
+Options:
+- hiddenfieldname: the name of the selected friend
+- includecurrentuser: defines is the current logged users should be part of the options
+
+If the input field has a cssclass "fbs_single", then you can only select one friend (the selector field is hidden).
+If it has not a css class "fbs_single", it will allow you to select as many friends as you want.
+
+Limitations/Disclaimer:
+Friends that have been already selected can be selected as many time (is not in "fbs_single" mode).
+It is javascript based! The friends' list is cached (thanks to the autocompleter plugin) once per page.
+I didn't try it with more than 200 friends...

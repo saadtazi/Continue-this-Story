@@ -1,0 +1,33 @@
+# default values
+dev:
+  facebook:
+    api_key: dac8b34139687e018bfc85bfc6550b28
+    api_secret: 5f63be59cb8d0ac10f4fa94a63293b49
+    api_id: 416389400383
+all:
+  facebook:
+    api_key: f0bda061f0e97f42edfcaf8676b827a0
+    api_secret: e1d559dc99ad52a34f621df8fd59fb77
+    api_id: 271833368432
+    redirect_after_connect: false
+    redirect_after_connect_url: ''
+    connect_signin_url: 'sfFacebookConnectAuth/signin'
+    app_url: '/my-app'
+    guard_adapter: ~
+    js_framework: none # none, jQuery or prototype.
+
+  sf_guard_plugin:
+    profile_class: sfGuardUserProfile
+    profile_field_name: user_id
+    profile_facebook_uid_name: facebook_uid # WARNING this column must be of type varchar! 100000398093902 is a valid uid for example!
+    profile_email_name: email
+    profile_email_hash_name: email_hash
+
+  facebook_connect:
+    load_routing:     false
+    user_permissions: []
+
+  culture:
+    available_cultures:
+      en: English
+      fr: French

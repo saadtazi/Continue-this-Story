@@ -1,0 +1,62 @@
+sfGuardUser:
+  saad:
+    username: stazi@fruitsoftware.com
+    password: coucou
+  hal:
+    username: halgatewood@gmail.com
+    password: coucou
+
+Story:
+  story_active_public:
+    title: Hier est un autre jour
+    Creator: saad
+    culture: fr
+    is_active: true
+    is_public: true
+    is_finished: false
+    tags: hier, demain, autre
+  story_active_private:
+    title: Yesterday is gone
+    Creator: saad
+    culture: en
+    is_active: true
+    is_public: false
+    is_finished: false
+    tags: yesterday
+
+StoryPiece:
+  piece_1_1:
+    Story: story_active_public
+    is_active: true
+    Writer: saad
+    writer_name: Saad
+    text: Mais oublions aujourd'hui. Car demain était une belle journée
+    next_writer_id: null
+  piece_1_2:
+    Story: story_active_public
+    is_active: true
+    Writer: hal
+    writer_name: Saad
+    text: Mais oublions aujourd'hui. Car demain était une belle journée
+    next_writer_id: null
+  piece_1_3:
+    Story: story_active_public
+    is_active: true
+    Writer: saad
+    writer_name: Saad
+    text: La semaine dernière, j'ai mangé du chocolat
+#    next_writer_id: hal
+  piece_2_1:
+    Story: story_active_private
+    is_active: true
+    Writer: saad
+    writer_name: Saad
+    text: story 2 private first piece
+    next_writer_id: null
+  piece_2_2:
+    Story: story_active_private
+    is_active: true
+    Writer: saad
+    writer_name: Saad
+    text: story 2 private second piece
+    next_writer_id: null

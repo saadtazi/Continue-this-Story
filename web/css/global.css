@@ -1,0 +1,147 @@
+/*  -------------------------------------------------------------------
+Reset - Feb 2008 -------------------------------------------------- */
+    html, body, div, span, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, code,
+    del, dfn, img, q, dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+	border:0;
+	font-family:inherit;
+	font-size:1em;
+	font-style:inherit;
+	font-weight:inherit;
+	margin:0; padding:0;
+	vertical-align:baseline;
+    }
+    body { font-size:100.01%; line-height:1; }
+    table { border-collapse:collapse; border-spacing:0; }
+    caption, th, td { text-align:left; font-weight:normal; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+    blockquote, q { quotes:"" ""; }
+    embed:hover, embed:active:hover, embed:visited:hover { border:0px #fff solid; }
+
+
+/*  -----------------------------------------------------------------------
+Redefine Tag ---------------------------------------------------------- */
+    html, body { height:100%; }
+
+    body {
+	background-color:#ddd;
+	color:#666;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px; line-height:21px;
+	padding:0;
+	width:100%;
+    }
+
+    td { vertical-align: top; }
+    object, embed { display:block; }
+    p {	margin-bottom:15px; }
+    address { font-style: normal; }
+
+    a, a:active { color:#333; }
+    a:hover, a:visited:hover, a:active:hover { color:#666; border-bottom-color:transparent; }
+    /*a:visited { color:#666;  border-bottom-color:#666; }*/
+
+    object, embed { display:block; }
+    embed:hover, embed:active:hover, embed:visited:hover { border: 0px #fff solid; }
+
+    sup { font-size:9px; vertical-align:top; }
+
+    h1, h2 {
+	    clear:both;
+	    font-style:italic;
+	    margin-bottom:20px;
+    }
+    h1 {font-size:40px; line-height:40px;}
+    h2 {font-size:20px; line-height:20px;}
+    h3 {font-size:15px; line-height:15px;}
+
+
+/*  -----------------------------------------------------------------------
+Tags ----------------------------------------------------------------- */
+    #col1 {
+	float:right; clear:right;
+	background-color: #555;
+	width: 25%;
+	padding: 10px;
+	margin-top: 10px;margin-bottom: 10px;
+	min-height:50%;
+    }
+    #cloud h3 {color:#999;font-weight: bold;}
+    #cloud a {color: #999;}
+    #cloud .tag1 { font-size: 0.9em; font-weight: 100; }
+    #cloud .tag2 { font-size: 1.0em; font-weight: 200; }
+    #cloud .tag3 { font-size: 1.1em; font-weight: 300; }
+    #cloud .tag4 { font-size: 1.2em; font-weight: 400; }
+    #cloud .tag5 { font-size: 1.4em; font-weight: 500; }
+    #cloud .tag6 { font-size: 1.6em; font-weight: 600; }
+    #cloud .tag7 { font-size: 1.8em; font-weight: 700; }
+    #cloud .tag8 { font-size: 2.0em; font-weight: 800; }
+    #cloud .tag9 { font-size: 2.2em; font-weight: 900; }
+    #cloud .tag10 { font-size: 2.5em; font-weight: 900; }
+
+    #cloud li { clear: both; list-style-type: none; display: inline; }
+    .storytags li {display: inline;clear: both;}
+/*  -----------------------------------------------------------------------
+Content ----------------------------------------------------------------- */
+
+#content {
+    width: 70%;
+    clear:left;float: left;
+    padding: 20px 10px 20px 10px;
+}
+
+/*  -----------------------------------------------------------------------
+Header/Footer ----------------------------------------------------------------- */
+#header, #langswitcher a, #footer, #footer a {
+        color: #999;
+}
+#header, #footer {
+    float: left;
+    width:99%;
+    background-color:#444;
+    background-image:url(../images/bg_header.gif);
+    background-position:left top;
+    background-repeat:repeat;
+    /*min-height:50px;*/
+    padding:20px 0 20px 20px;
+}
+#logo {
+    letter-spacing: 10px;
+    text-shadow: 1px 2px 2px #caa;
+    font-weight: bolder;
+    font-size: 2em;
+    width: 50%;
+    clear: none;
+    display: inline;
+}
+#logo a {text-decoration: none;color: #ccc;}
+#logo a:hover {color: #fff;}
+#loginbox {float: right; clear: none; margin: 0 20px 0 20px; }
+#headerlinks {float: right; clear: none; }
+#langswitcher {clear: none;}
+
+
+#footer {clear: both;}
+
+/*  -----------------------------------------------------------------------
+Other ----------------------------------------------------------------- */
+li.storyitem {list-style-type: none;}
+
+
+/*  -----------------------------------------------------------------------
+Clearfix ----------------------------------------------------------------- */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {display:inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix {height:1px;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
