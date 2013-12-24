@@ -1,11 +1,6 @@
 Disclaimer
 ==========
-
-This project is no longer maintained.
-It uses symfony 1.4. I never upgraded this project to symfony 2.
-Also note that it uses an old (very old) version of the facebook api, which is no longer supported by facebook.
-Basically, it no longer works...
-
+The Symfony2 rewrite is work in progress. Feel free to chip in and help.
 
 Intro
 =====
@@ -15,16 +10,18 @@ Everybody who has a facebook account can start a story, write the first piece, a
 
 Technologies/Requirements
 ==========================
-- symfony 1.4.1 framework (so php 5.2.4):
-- an ODBC that is supported by PDO/Doctrine (tested with mySQL)
+- symfony 2.3 framework (so php 5.4)
+- an ODBC that is supported by PDO/Doctrine (tested with sqlite3)
 - webserver - tested with apache
-- a webdeveloper account
+- a developer account in FB
 
 Installation
 ============
 - git clone it!
-- drop the symfony files inside /lib/vendor/symfony or set the proper symfony path in projectConfiguration.php
-- configure config/database.yml (or run the symfony configure:database command)
-- build everything: php symfony doctrine:build --all --and-load
-
-
+- check your php installation: ``php app/check.php``
+- install composer (for example, by doing ``curl -s http://getcomposer.org/installer | php``)
+- install the vendors: ``php composer.phar install``
+- configure config/database.yml
+- TODO configure the FB API key and WEbise
+- TODO doctrine build
+- TODO DB creation
