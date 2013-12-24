@@ -1,6 +1,6 @@
 {
     "name": "SaadTazi/Continue-This-Story",
-    "license": "TBD",
+    "license": "AGPLv3",
     "type": "project",
     "description": "A website to let people write stories together",
     "autoload": {
