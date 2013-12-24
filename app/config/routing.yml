@@ -1,0 +1,10 @@
+saad_tazi_continue_this_story:
+    resource: "@SaadTaziContinueThisStoryBundle/Resources/config/routing.yml"
+    prefix:   /
+
+_security_check:
+    pattern:  /login_check
+_security_logout:
+    pattern:  /logout
+fos_facebook_channel:
+    resource: "@FOSFacebookBundle/Resources/config/routing.xml"
